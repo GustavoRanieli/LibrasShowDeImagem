@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+  <title>Libras</title>
+  <link rel="stylesheet" href="../Css/reset.css">
+  <link rel="stylesheet" href="../Css/styleLibras.css">
+  <link rel="shortcut icon" href="../img/cubo.ico" type="image/x-icon">
+
+  <script src="../js/tf-core.min.js"></script>
+  <script src="../js/tf-converter.min.js"></script>
+
+  <!-- use the WebGL backend (recommended) - you can alternatively use the WASM backend -->
+  <script src="../js/tf-backend-webgl.min.js"></script>
+  <script src="../js/handpose.min.js"></script>
+
+  <!-- Fingerpose biblioteca -->
+  <script src="../js/fingerpose.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="../js/gestosCamera.min.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" src="../js/microphone.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../js/waveform.js" charset="utf-8"></script>
+  <script type="text/javascript" src="../js/autoMicro.min.js" charset="utf-8"></script>
+
+</head>
+<body>
+  <main>
+    <div>
+      <button id="btAjuda" class="ajuda">Ajuda</button>
+    </div>
+
+    <div class="container">
+      <section id="Vídeo">
+        <div class="card">
+
+          <div class="video">
+              <div id="video-container" >
+                  <video id="pose-video" class="layer" playsinline ></video>
+                  <canvas id="pose-canvas" class="layer"></canvas>
+                  <audio id="microphone" autoplay></audio>
+                    <div id="wrap">
+                        <canvas id="canvas" width="150" height="50"></canvas>
+                    </div>
+                  <div id="pose-result" class="layer"></div>
+              </div>
+            </div>
+
+        </div>
+      </section>
+
+      <section id="Input">
+        <div id="progressBar" class="None">Carregando</div>
+        <button id="capture" class="btFunction" onclick="main()">Capturar Gesto</button>
+          <div class="cardInput">
+              <input  name="libras"  class="words" type="text" id="inputLayer"></input>
+              <input type="submit" class="clipboard" id="btSubmit" value="Copiar" onclick="librys()">
+              <button style="display: none;" id="btMic" onclick="record(this)"></button>
+            </form>
+          </div>
+      </section>
+    </div>
+  </main>  
+</body>
+  <script src="../js/WhiteBoard.js" type="text/javascript" charset="utf-8"></script>
+</html>

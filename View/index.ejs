@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-Br" id="html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../Css/reset.css">
+    <link type="text/css" rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../img/cubo.ico" type="image/x-icon">
+    <title>Sílabas</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="true"/>
+    <script type="text/javascript" src="../node_modules/iink-js/dist/iink.min.js"></script>
+    <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+    
+</head>
+
+<body>
+<section id="ContainerPalavras">
+    <div id="Container" class="Container">
+            <h1 class="Titulo"><p style="color: #fff35e; display: inline-block;">Di</p><p style="color: #00e6ff; display: inline-block">vi</p><p style="color: #f066a1;display: inline-block">são</p>     <p class="Silaba">Si-lá-bi-ca</p><i class="fas fa-pencil-alt"></i></h1>
+
+        <form action="/palavra" method="POST" enctype="application/x-www-form-urlencoded">
+            <input id="textInput" name="palavra" type="text" class="Palavra" placeholder="Exemplo: à-vontade, á-bê-cê">
+            <input type="submit" class="Submit" id="enviar" value="">
+            <button id="Manuscrit" class="manuscrit" type="button">White Board</button>
+            <button id="LibrasPage" class="libryBt" type="button">Libras</button>
+            <input id="microfone" type="button" class="Micro" onclick="record(this)">
+                <audio id="microphone" autoplay></audio>
+                <div id="wrap">
+                    <canvas id="canvas" width="150" height="50"></canvas>
+                </div>
+        </form> 
+
+        <% for( i = 0; i < tamanho; i++){ %>
+            <input silaba type="text" class="Text" value=<%= palavra[i] %> readOnly='true'>
+        <% } %>
+
+        <h2 class=<%= classInval %> ><%= invalido %></h2>
+        <a href="/cadastro"><button class=<%= classBtInval %> >Cadastrar Palavra ✏️</button></a>
+            <div class=<%= whiteboard %> >
+                <button id="btGaleria">Galeria</button>
+                <button class="<%= display3D %>" id="bt3D">3D</button>
+                <button id="btVideos">Vídeos</button>
+                <iframe id="WhiteBoard" class="None" src="<%= iframe %>"></iframe>
+                <iframe id="iframeGaleria" class="None" src="<%= galeriURL %>" id="Galeria"></iframe>
+                <iframe id="iframeVideo" class="None" src="<%= videosURL %>" id="Vídeo"></iframe>
+            </div>
+    </div>
+</section>
+
+<!-- Div do MyScriptStyles oculta -->
+          
+</div>  
+</section>
+</body>
+        <script type="text/javascript" src="../js/animation.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/visualizer.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/microphone.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/recognize.js" charset="utf-8"></script>
+        <script type="text/javascript" src="../js/waveform.js" charset="utf-8"></script>
+
+        <script>
+        setInterval(() => {
+            let boardContent = localStorage.getItem('board');
+            let iframeGaleria = document.querySelector('#iframeGaleria');
+            let iframeVideo = document.querySelector('#iframeVideo');
+            let textInput = document.querySelector('#textInput');
+
+            if(boardContent != ''){
+                setTimeout(() => {
+                textInput.value = boardContent;
+                iframeGaleria.setAttribute('src', `https://www.bing.com/images/search?q=${boardContent}`);
+                iframeVideo.setAttribute('src', `https://www.bing.com/videos/search?q=${boardContent}`);
+
+                localStorage.setItem('board', '');
+                }, 800);
+                return
+            }else{
+                console.log('Board Vazio')
+            };
+
+        }, 800)
+            
+        </script>
+</html>
+

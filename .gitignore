@@ -1,0 +1,8 @@
+# Ignorando os arquivos de audio
+/audio
+
+# Ignorando os arquivos de fontes
+/Fonts
+
+# Ignorando Node_Modules
+/node_modules

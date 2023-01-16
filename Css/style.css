@@ -1,0 +1,461 @@
+@font-face {
+    font-family: 'Bernadette-rough';
+    src: local('Bernadette'), url('/Fonts/bernadette_rough.ttf'); 
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Montserrat-MediumItalic';
+    src: local('Montserrat'), url('/Fonts/Montserrat-MediumItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-regular';
+    src: local('Montserrat'), url('/Fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-SemiBold';
+    src: local('Montserrat'), url('/Fonts/Montserrat-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: local('Montserrat'), url('/Fonts/Montserrat-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'BubbleBold';
+    src: local('Montserrat'), url('/Fonts/BubbleboddyNeue-ExtraBold\ Trial.ttf');
+}
+
+@font-face {
+    font-family: 'BubbleRegular';
+    src: local('Montserrat'), url('/Fonts/bubbleboddyneue-regular\ trial.ttf');
+}
+
+html{
+    height: auto;
+    background-image: url('../img/Layoutt.gif');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+
+/* =================================== Primeira Página ============================================= */
+/* Card */
+.Container{
+    text-align: center;
+    width: 50%;
+    margin: 0.5% 25%;
+    padding: 30px;
+    background-color: #17595a;
+    border-radius: 35px;
+    border: 20px solid #c5de79;
+    height: 80%;
+}
+
+.Container h1{
+    font-family: 'BubbleBold';
+    font-size: 3vw;
+    color: #bdf057
+}
+
+.Titulo{
+    text-shadow: 1px 5px 2px #000000;
+}
+
+.Silaba{
+    font-family: "Bernadette-rough";
+    display: inline-block
+}
+/* Bernadette-rough */
+
+/* Inputs */
+.Palavra{
+    padding: 1%;
+    margin: 2%;
+    width: 25%;
+    border-radius: 10px;
+    border: 5px solid #f3f3f3;
+    font-weight: 600;
+    background-color: transparent;
+    color: #fff;
+    font-size: 1.5vw;
+    vertical-align: middle;
+}
+
+.Palavra::placeholder{
+    color: #f3f3f3;
+    opacity: 0.7;
+    font-size: 0.9vw;
+    font-family: "BubbleRegular";
+}
+
+.Submit{
+    padding: 3.5%;
+    border-radius: 10px;
+    border: transparent;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url('/img/Submit.png');
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 25px;
+    background-size: auto 100%;
+    vertical-align: middle;
+}
+
+.Micro{
+    padding: 3.5%;
+    border-radius: 10px;
+    border: transparent;
+    height: 2vw;
+    width: 2%;
+    background-image: url('/img/Micro.png');
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align:middle;
+}
+
+.libryBt{
+    text-align: left;
+    border-radius: 10px;
+    border: transparent;
+    height: 3.4vw;
+    width: 8%;
+    background-image: url('/img/libras.png');
+    background-size: 35%;
+    background-position:right;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    vertical-align:middle;
+    background-color: #a5f046;
+    font-family: 'BubbleRegular';
+    font-size: 0.8vw;
+    color: #17595a;
+}
+
+.Text{
+    -webkit-box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.57);
+    -moz-box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.57);
+    box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.57);
+    width: 15%;
+    padding: 5%;
+    margin: 1%;
+    border: 1px solid;
+    border-radius: 10px;
+    font-family: 'BubbleRegular';
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 3.8vw;
+    background-image: url('../img/AltoFalante.png');
+    background-repeat: no-repeat;
+    background-position:right;
+    background-position-x: 95%;
+    background-position-y: 95%;
+    background-size: 18%;
+    color: #bc2e1e;
+    text-shadow: 1px 1px #000, 0 1px 0px #5c5c5c, 1px 0 0px #5c5c5c, 1px 2px 1px #5c5c5c, 2px 1px 1px #5c5c5c, 2px 3px 2px #5c5c5c, 3px 2px 2px #5c5c5c, 3px 4px 2px #5c5c5c, 4px 3px 3px #5c5c5c;
+}
+
+/* Cadastro e Erro */
+.None{
+    display: none;
+}
+
+.Invalido{
+    font-family: 'BublleRegular';
+    font-weight: lighter;
+    font-size: 1.5vw;
+    color: #FFF;
+    margin: 2%;
+}
+
+.Cadastro{
+    color: #17595a;
+    font-family: 'BubbleRegular';
+    font-size: 1vw;
+    padding: 2%;
+    font-weight: 600;
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #a5f046;
+}
+
+/* ==================================== Segunda Página ================================== */
+/* Observação, alguns estilos foram reaproveitados da primeira página */
+.PalavraCadastrar{
+    padding: 2%;
+    margin: 2% 10%;
+    width: 80%;
+    border-radius: 10px;
+    border: 1px solid #f3f3f3;
+    font-weight: 600;
+    background-color: transparent;
+    color: #fff;
+    display: block;
+}
+
+.PalavraCadastrar::placeholder{
+    color: #f3f3f3;
+    text-align: center;
+    opacity: 0.5;
+    font-family: 'BubbleRegular';
+
+    font-size: 1.2vw;
+}
+
+
+
+.CadastrarPalavra{
+    color: #f3f3f3;
+    font-family: 'BubbleBold';
+    font-size: 1vw;
+    padding: 1.5%;
+    font-weight: 600;
+    border: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #a8cf45;
+    display: block;
+    margin: 3% 35%;
+    width: 25%;
+    text-shadow: 1px 1px #4b4b4d, 2px 2px #4b4b4d, 3px 3px #4b4b4d;
+}
+
+/* =================================== WhiteBoard Iframe ================================ */
+.containerWhiteBoard{
+    padding: 2%;
+    display: block;
+}
+
+#TextWhiteBoard{
+    margin: 2%;
+    font-family: 'BubbleRegular';
+    font-size: 2vw;
+    color: #bdf057;
+}
+
+.Whiteboard{
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+    height: 90vh;
+}
+
+.Whiteboard button{
+    border-radius: 15px;
+    padding: 2%;
+    margin: 3% 2% 1% 2%;
+    font-family: 'Montserrat-SemiBold';
+    border: transparent;
+    font-size: 0.8vw;
+}
+
+.Whiteboard button:focus{
+    background-color: cyan;
+}
+
+.WhiteboardIframe{
+    border-radius: 15px;
+    width: 100%;
+    height: 80vh;
+}
+
+/* ==================================== Animação ======================================== */ 
+.author {
+    color: rgb(180, 0, 75);
+    text-decoration: none;
+}
+
+.fas {
+    color: #a8cf45;
+    font-size: 3rem;
+   /*  background-color: green; conditional */
+    margin: 0px;
+    padding: 0px;
+    /*****
+    animation-name: erasing;    
+    animation-duration: 3s;
+    ***/
+}
+
+#wrap{
+    display: inline-block;
+    margin-left: 2%;
+    vertical-align:-30px;
+}
+
+#Manuscrit{
+    background-color: #a5f046;
+    border: transparent;
+    font-family: 'BubbleRegular';
+    border-radius: 15px;
+    height: auto;
+    padding: 2.5% 1%;
+    padding-right: 3%;
+    font-size: 0.8vw;
+    vertical-align: middle;
+    color: #17595a;
+    background-image: url('../img/lapis.png');
+    background-repeat: no-repeat;
+    background-size: 20%;
+    background-position-x: 98%;
+    background-position-y: 35%;
+    text-align: start;
+}
+
+#canvas {
+    display: block;
+    margin: 20px auto 0 auto;
+    border-bottom: 2px solid #a8cf45;
+}
+
+.clipboardWhiteBoard{
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    width: 45%;
+}
+
+.inputPalavra{
+    border: transparent;
+    background-color: #fff;
+    color: #fff;
+    padding: 5%;
+}
+
+.btclipboard{
+    font-family: 'Montserrat-SemiBold';
+    background-color: #1a9fff;
+    border-radius: 10px;
+    padding: 5%;
+    cursor: pointer;
+    border: transparent;
+    color: #fff;
+    font-size: 1vw;
+
+}
+
+.resetWhiteBoard{
+    font-family: 'Montserrat-SemiBold';
+    color: #fff;
+    background-color: #1a9fff;
+    border-radius: 10px;
+    padding: 5%;
+    cursor: pointer;
+    border: transparent;
+    font-size: 1vw;
+}
+
+
+
+
+
+
+
+/**** this is the Pencil Erasing animation****/
+/* .erasing-animation {
+    animation: erasing 1.8s ease 0s normal forwards;
+} */
+
+/* @keyframes erasing {
+    0% {transform: rotate(0deg);}
+    10% {transform: rotate(180deg);}
+    60% {transform: rotate(180deg);}
+    70% {transform: rotate(0deg);}
+    100% {transform: rotate(0deg);}
+} 
+    
+/***this is the pencil writing animation*****/
+/* .writing-animation {
+    animation: writting 4s ease 0s normal forwards;
+    
+} */
+
+/* @keyframes writting {
+    0%  {transform: translate(0px,0px);}
+    2%  {transform: translate(30px,-40px);}
+    4%  {transform: translate(0px,0px);}
+    6%  {transform: translate(30px,-40px);}
+    8% {transform: translate(0px,0px);}
+    10% {transform: translate(30px,-40px);}
+    12% {transform: translate(0px,0px);}
+    14% {transform: translate(30px,-40px);}
+    16% {transform: translate(0px,0px);}
+    18% {transform: translate(30px,-40px);}
+    20% {transform: translate(0px,0px);}
+    22% {transform: translate(30px,-40px);}
+    24% {transform: translate(0px,0px);}
+    26% {transform: translate(30px,-40px);}
+    28% {transform: translate(0px,0px);}
+    30% {transform: translate(30px,-40px);}
+    32% {transform: translate(0px,0px);}
+    34% {transform: translate(30px,-40px);}
+    36% {transform: translate(0px,0px);}
+    38% {transform: translate(30px,-40px);}
+    40% {transform: translate(0px,0px);}
+    42% {transform: translate(30px,-40px);}
+    44% {transform: translate(0px,0px);}
+    46% {transform: translate(30px,-40px);}
+    48% {transform: translate(0px,0px);}
+    50% {transform: translate(30px,-40px);}
+    52% {transform: translate(0px,0px);}
+    54% {transform: translate(30px,-40px);}
+    56% {transform: translate(0px,0px);}
+    58% {transform: translate(30px,-40px);}
+    60% {transform: translate(0px,0px);}
+    62% {transform: translate(30px,-40px);}
+    64% {transform: translate(0px,0px);}
+    66% {transform: translate(30px,-40px);}
+    68%{transform: translate(0px,0px);}
+  
+    70% {transform: translate(30px,-40px);}
+    72% {transform: translate(0px,0px);}
+    74% {transform: translate(30px,-40px);}
+    76% {transform: translate(0px,0px);}
+    78% {transform: translate(30px,-40px);}
+    80% {transform: translate(0px,0px);}
+    82% {transform: translate(30px,-40px);}
+    84% {transform: translate(0px,0px);}
+    86% {transform: translate(30px,-40px);}
+    88% {transform: translate(0px,0px);}
+    90% {transform: translate(30px,-40px);}
+    92% {transform: translate(0px,0px);}
+    94% {transform: translate(30px,-40px);}
+    96% {transform: translate(0px,0px);}
+    98% {transform: translate(30px,-40px);}
+    100% {transform: translate(0px,0px);} 
+} */
+
+@media(min-width: 1200px){
+    h1 {
+        font-size: 5rem;
+    }
+    .fas {
+        font-size: 5rem;
+    }
+}
+@media(max-width: 800px){
+    .container {
+        padding: 0 1rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+}
+@media(max-width: 500px){
+    h1 {
+        font-size: 2.5 rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}

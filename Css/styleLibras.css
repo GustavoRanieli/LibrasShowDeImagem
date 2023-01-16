@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'Montserrat-regular';
+  src: local('Montserrat'), url('/Fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: local('Montserrat'), url('/Fonts/Montserrat-ExtraBold.ttf');
+}
+
+html{
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-image: url('../img/Layoutt.gif');
+  background-repeat: no-repeat;
+  background-size: 100% 120%;
+}
+
+/* Css Padrão do projeto que estou com preguiça de editar */
+  .None{
+    display: none;
+  }
+
+  .video{
+    padding: 0 20px;
+    height: auto;
+    width: 100%;
+  }
+
+  #video-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding-bottom: 75%;
+  }
+
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #pose-video {
+    transform: scaleX(-1);
+    height: auto;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  #pose-result {
+    font-size: 100px;
+    padding: 20px 30px 0 0;
+    color: #fff;
+    font-family: 'Montserrat-ExtraBold';
+    text-shadow: 3px 3px 3px #000000;
+    margin-left: 85%;
+  }
+
+  /* Meu CSS */
+  .ajuda{
+    margin-top: 2%;
+    margin-left: 90%;
+    padding: 0.5%;
+    width: 5%;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #17595a;
+    color: #fff;
+    font-family: 'Montserrat-ExtraBold';
+  }
+
+  .container{
+    margin: 2% 25%;
+    border: 1px solid #000;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #fff;
+  }
+
+  .card{
+    margin: 5% 25%;
+  }
+
+  #wrap{
+    margin-left: 70%;
+    margin-top: 10%;
+    position: absolute;
+  }
+
+  .cardInput{
+    margin: 1% 25%;
+    width: 100%;
+  }
+
+  .btFunction{
+    margin: 1% 25%;
+    width: 55%;
+    padding: 1% 0%;
+    color: #fff;
+    border: transparent;
+    background-color: #17595a;
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 0.8vw;
+  }
+
+  .progress{
+    transition: all 1s;
+    border-radius: 5px;
+    border: transparent;
+    margin: 0 25%;
+    background-color: #17595a;
+    height: 5%;
+    width: 1%;
+    text-align: center;
+    padding: 2%;
+    color: #fff;
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 0.6vw;
+  }
+
+  .words{
+    padding: 1%;
+    width: 41%;
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 0.6vw;
+
+  }
+
+  .clipboard{
+    margin-left: 1%;
+    padding: 1%;
+    width: 10%;
+    background-color: #17595a;
+    color: #fff;
+    border: transparent;
+    font-family: 'Montserrat-ExtraBold';
+    font-size: 0.6vw;
+    cursor: pointer;
+  }
+
+
+
+ 
